@@ -228,7 +228,7 @@ hr{
         background-color: white;
         width: auto;
     }
-    .main_menu_item{display:block; background-color: rgba(255, 255, 255, 0);}
+    .main_menu_item{display:block; background-color: white;}
     .main_menu_item >a{
         text-decoration: none;
         color:lightcoral;
@@ -380,7 +380,6 @@ hr{
 
     .main_menu{
         margin-left: 0;
-        margin-right: 5%;
     }
 
     .main_menu_logo{display: none;}
