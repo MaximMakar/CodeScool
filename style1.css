@@ -4,6 +4,7 @@ body, html{margin: 0;padding: 0;}
 
 .main_menu{width: 100%;}
 
+
 .raspisanie{
     display: flex;
     flex-direction: column;
@@ -224,7 +225,7 @@ hr{
         background-color: white;
         width: auto;
     }
-    
+    .main_menu_item{display:block;}
     .main_menu_item >a{
         text-decoration: none;
         color:lightcoral;
