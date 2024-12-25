@@ -230,7 +230,6 @@ hr{
     }
     .main_menu_item{
       display:block; 
-      background-color: white;
     }
   
     .main_menu_item >a{
@@ -239,7 +238,7 @@ hr{
          margin: 25px;
         }
     
-    .main_menu_item >a:visited{text-decoration: none;color:lightcoral; font-size: 35px; background-color: white; }
+    .main_menu_item >a:visited{text-decoration: none;color:lightcoral; font-size: 35px; }
     .main_menu_item >a:hover{color:violet;}
     .menu-programs >li>a{text-decoration: none;color:lightcoral;font-size: 25px; margin-right: 25px;}
     .menu-programs >li>a:visited{text-decoration: none;color:lightcoral;font-size: 20px;}
@@ -276,7 +275,6 @@ hr{
         font-size: 21px;
         border: 3px solid lightcoral;
         border-radius: 6px;
-        background-color: white;
         width: auto;
     }
     #education_item_1, #education_item_2, #education_item_3, #education_item_4
