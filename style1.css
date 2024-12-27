@@ -1,5 +1,6 @@
 body, html{margin: 0; padding: 0;}
 
+.main_description_pict{float: left;}
 
 .contacts_container {display:flex; flex-direction: row; justify-content: center; text-align: center;}
 
@@ -62,8 +63,12 @@ hr{
 }
 
 #education_item_1, #education_item_2, #education_item_3, #education_item_4
-{font-size: 30px;
- color: lightcoral ;
+{
+font-size: 30px;
+ color: lightcoral;
+ text-align: center;
+ margin-left: 0;
+ user-select: none;
 }
 
 .education_item {
@@ -120,49 +125,9 @@ hr{
     margin-right: 20px;
 }
 
-.program_card .front{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    backface-visibility: hidden;
-    transition: all 1s ease-in;
-    border: 2px solid lightcoral;
-    border-radius: 10px ;
-    margin:10px;
-    text-decoration: none;
-}
-
-.program_card .back{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px ;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 1s ease-in;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    border: 2px solid lightcoral;
-    border-radius: 10px ;
-    margin: 10px;
-    text-decoration: none;
-}
-
-
 .program_card_image{ width:80px; height: 80px; margin: 7px;}
-.program_card_title{font-size: 25px; color: lightcoral;}
-.program_card_text{font-size: 18px; color: lightcoral;}
+.program_card_title{font-size: 25px; color: lightcoral; text-align: center;}
+.program_card_text{font-size: 18px; color: lightcoral; text-align: center;}
 
 .raspisanie > table {
     margin-left: 7px;
@@ -186,6 +151,10 @@ hr{
  }
 
  .program_card_image { stroke: transparent; fill: violet; }
+
+.program_card_title, .main_menu_item, .contacts_href, .identification_button, .section_title{
+    user-select: none;
+}
 
 @media (min-width: 1081px) {
     #burger{
@@ -249,20 +218,59 @@ hr{
      
      #education_item_1, #education_item_2, #education_item_3, #education_item_4
      {
-        padding-top: 65px;
-        text-align: center;
+        padding-top: 75px;
      }
 
-     .program_card:hover .front{transform: rotateY(-180deg);}
-     .program_card:hover .back{transform: rotateY(0deg);}
     
+     .program_card .front{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        backface-visibility: hidden;
+        transition: all 1s ease-in;
+        transform: rotateY(0deg);
+        border: 2px solid lightcoral;
+        border-radius: 10px ;
+        margin:10px;
+        text-decoration: none;
+    }
+    
+    .program_card .back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 1s ease-in;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        border: 2px solid lightcoral;
+        border-radius: 10px ;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+    .program_card:hover .front{transform: rotateY(-180deg);}
+    .program_card:hover .back{transform: rotateY(0deg);}
 }
 
 @media (min-width: 1081px){ 
     .main_menu_item{font-size: 48px;} 
-    .section_title{padding-top: 50px;}
-    header{height: 30px;width: 100%;}
-    }
+    .section_title{padding-top: 60px;}
+    header{height: 30px; width: 100%;}
+    
 
     .menu-programs{
         position: absolute;
@@ -277,12 +285,16 @@ hr{
     }
     #education_item_1, #education_item_2, #education_item_3, #education_item_4
     {
-       padding-top: 65px;
+       padding-top: 75px;
        text-align: center;
     }
+}
 
 @media (max-width: 1080px){ 
-    .section_title{padding-top: 40px;}
+    .section_title{
+        padding-top: 40px;
+         font-size: 38px;
+    }
 
     .main_menu_item{font-size: 22px; width: 80%;} 
 
@@ -305,19 +317,56 @@ hr{
     {
        padding-top: 65px;
        text-align: center;
+       font-size: 30px;
     }
 
-    .program_card:hover .front{transform: rotateY(-180deg);}
-    .program_card:hover .back{transform: rotateY(0deg);}
-
-    body.modal-open main, footer{
+    body.modal-open main{
         filter: blur(6px);
       }
+
+    body.modal-open footer{
+        filter: blur(6px);
+      }      
 
     .education_programs{
         width: 80%;
         margin: auto;
      }
+     .program_card{
+        width: 230px; 
+        height: 380px;
+        border: 2px solid lightcoral;
+        border-radius: 10px ;
+        padding-left: 10px;
+        padding-right: 10px;
+     }
+
+    .program_card .front{
+        left: 0;
+        width: 100%;
+        height: 50%;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    
+    .program_card .back{
+        width: 100%;
+        height: 50%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .program_card_title{font-size: 22px; padding-top: 10px; margin-bottom: 10px;}
+    .program_card_text{font-size: 17px; margin: 7px;}
+    .program_card .back >.program_card_image{display: none;}
 }
 
 @media (max-width: 1080px) {
@@ -430,7 +479,7 @@ hr{
 
     #education_item_1, #education_item_2, #education_item_3, #education_item_4
     {
-       padding-top: 2px;
+       padding-top: 20px;
        text-align: center;
     }
 
@@ -444,17 +493,25 @@ hr{
 .main_description_pict:hover{
    color: violet;
 }
+
 .section_title{padding-top: 85px;}
 
-@media  (min-width: 1080px) and (max-width: 1510px)
+@media (min-width: 1080px) and (max-width: 1690px)
 {
-    .main_menu_item{font-size: 20px;}
+    .main_menu_item{font-size: 24px;}
     .menu-programs{
-        font-size: 16px;}
+        font-size: 20px;
+        margin-bottom: 10px;
+         margin-top: 20px;
+    }
+
 }
     
 @media (min-width: 600px) and (max-width: 1080px){
     #burger {margin-left: 90%;}
     .menu-programs{
-        font-size: 21px;}
+        font-size: 21px;
+         margin-bottom: 10px;
+         margin-top: 10px;
+        }
 }
